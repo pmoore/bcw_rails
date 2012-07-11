@@ -1,39 +1,39 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'bundler'
 gem 'mysql2'
+gem 'devise'
+gem 'will_paginate'
+gem 'passenger'
+gem 'weddingwire_api', :git => "git@github.com:weddingwire/weddingwire_api.git", :branch => "master"
+gem 'weddingwire_catalog', :git => "git@github.com:weddingwire/weddingwire_catalog.git", :branch => "master"
+gem 'newrelic_rpm'
+gem 'geokit'
+gem 'execjs'
+gem 'therubyracer'
+gem 'devise'
+gem 'mobvious-rails'
+gem 'rails_autolink'
+gem 'delayed_job', '=2.1.4'
+gem 'gabba', :git => "git@github.com:weddingwire/gabba.git", :branch => "master"
+gem 'garails', :git=> "git@github.com:mobalean/garails.git", :branch => "master"
+gem 'dalli'
 
-
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
+end
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'ruby-prof'
 end
 
 gem 'jquery-rails'
-gem 'therubyracer'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'

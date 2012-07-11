@@ -13,3 +13,14 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Idea project files
+/.idea
+/.idea/*
+/.idea/*/**
+
+# Ignore precompiled assets
+/public/assets
+
+# Ignore DS_Store from Macs
+*.DS_Store

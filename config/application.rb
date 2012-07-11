@@ -1,12 +1,13 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'weddingwire_catalog/engine'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  #Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
+  Bundler.require(:default, :assets, Rails.env)
 end
 
 module BcwRails
@@ -55,5 +56,26 @@ module BcwRails
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # ww catalog configs
+    config.ww_catalog_review_hostname = 'http://www.eventwire.com'
+    config.ww_catalog_review_path = '/reviews?redirect='
+
+    # ww api configs
+    config.ww_api_partner_key = 't7gbpfdj'
+    config.ww_api_salt = 'c24c0b06e10a602d1a6ae9ea4f551d32'
+    config.ww_api_host = 'api.weddingwire.com'
+    config.ww_storefront_302 = '/vendors'
+
+    # fb api configs
+    config.fb_app_id = '253237268040374'
+    config.fb_app_secret = '5e75d2cf6d62d6a031230fae616bbe38'
+
+    #Configuring EST for WW Servers
+    config.time_zone = 'Eastern Time (US & Canada)'
+
+    config.site_wiresite_name = 'BirthdayWire'
+
+    config.ad_zone_id = '296'
   end
 end

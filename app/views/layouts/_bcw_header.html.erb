@@ -1,0 +1,42 @@
+<div class="city-landing-header">
+  <div class="site-center">
+    <a href="#"><span class="city-landing-logo dc"></span></a>
+    <a href="#"><span class="city-landing-bcw-logo"></span></a>
+  </div>
+</div>
+
+<div style="clear:both"></div>
+<div class="site-navigation-bar-container">
+
+  <div class="site-navigation-bar-inner">
+    <%= link_to "Home", root_path, :class => "site-navigation-bar-button left site-navigation-bar-highlighted" %>
+    <%= link_to "Wedding Vendors", root_path, :class => "site-navigation-bar-button site-navigation-bar-highlighted" %>
+    <%= link_to "Real Reviews", root_path, :class => "site-navigation-bar-button site-navigation-bar-highlighted" %>
+    <%= link_to "Local Events", root_path, :class => "site-navigation-bar-button site-navigation-bar-highlighted" %>
+    <%= link_to "Other Editions", root_path, :class => "site-navigation-bar-button site-navigation-bar-highlighted" %>
+  </div>
+
+</div>
+
+<%= content_for :scripts do %>
+    <script type="text/javascript">
+      $(function(){
+          $('.site-navigation-bar-button').hover(
+                  function(){
+                      $(this).css({
+                          backgroundColor: '#ffe3ec',
+                          textDecoration: 'none',
+                          color: '#444'
+                      });
+                  },
+                  function(){
+                      $(this).css({
+                          backgroundColor: '#FFFFFF',
+                          textDecoration: 'none',
+                          color: '#444'
+                      });
+                  });
+      });
+    </script>
+
+<% end %>

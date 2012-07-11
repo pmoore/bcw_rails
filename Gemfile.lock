@@ -1,5 +1,52 @@
+GIT
+  remote: git@github.com:mobalean/garails.git
+  revision: d5d7c0094e0edd4b7511433f23e1054e48358372
+  branch: master
+  specs:
+    garails (0.2.0)
+      gabbara (~> 0.0.5)
+
+GIT
+  remote: git@github.com:weddingwire/gabba.git
+  revision: b5c898e55c00c5905a02a50fcd22921e5bcb6093
+  branch: master
+  specs:
+    gabba (0.3.0)
+      ga_cookie_parser
+
+GIT
+  remote: git@github.com:weddingwire/weddingwire_api.git
+  revision: 204e42ef72bab07563332e00b3f4f4e9420ed8c9
+  branch: master
+  specs:
+    weddingwire_api (0.0.89)
+      active_attr
+      active_attr
+      activesupport (~> 3.2.0)
+      devise
+      multipart-post
+      rails (~> 3.2.0)
+
+GIT
+  remote: git@github.com:weddingwire/weddingwire_catalog.git
+  revision: 80052b0e57825b410bdf082aa8dabeea23331b60
+  branch: master
+  specs:
+    weddingwire_catalog (0.0.154)
+      activesupport (~> 3.2.0)
+      coffee-rails
+      devise
+      execjs
+      geokit
+      jquery-rails
+      mobvious-rails
+      rails (~> 3.2.0)
+      sass-rails
+      therubyracer
+      uglifier
+
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (3.2.3)
       actionpack (= 3.2.3)
@@ -14,6 +61,9 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.1.2)
+    active_attr (0.6.0)
+      activemodel (>= 3.0.2, < 4.1)
+      activesupport (>= 3.0.2, < 4.1)
     activemodel (3.2.3)
       activesupport (= 3.2.3)
       builder (~> 3.0.0)
@@ -29,7 +79,16 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
+    bcrypt-ruby (3.0.1)
     builder (3.0.0)
+    capistrano (2.12.0)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -37,9 +96,27 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.3.3)
+    daemon_controller (1.0.0)
+    daemons (1.1.8)
+    dalli (2.1.0)
+    delayed_job (2.1.4)
+      activesupport (~> 3.0)
+      daemons
+    devise (2.1.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (~> 3.1)
+      warden (~> 1.2.1)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fastthread (1.0.7)
+    ga_cookie_parser (0.1.0)
+    gabbara (0.0.6)
+      activesupport
+    geokit (1.6.5)
+      multi_json
+    highline (1.6.13)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -53,8 +130,30 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
+    mobileesp_converted (0.2.0)
+    mobvious (0.3.1)
+      mobileesp_converted (~> 0.2.0)
+      rack (>= 1.2.0)
+    mobvious-rails (0.1.2)
+      activesupport
+      mobvious
     multi_json (1.3.6)
+    multipart-post (1.1.5)
     mysql2 (0.3.11)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.5.2)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
+    newrelic_rpm (3.4.0.1)
+    orm_adapter (0.4.0)
+    passenger (3.0.13)
+      daemon_controller (>= 1.0.0)
+      fastthread (>= 1.0.1)
+      rack
+      rake (>= 0.8.1)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -71,6 +170,8 @@ GEM
       activesupport (= 3.2.3)
       bundler (~> 1.0)
       railties (= 3.2.3)
+    rails_autolink (1.0.9)
+      rails (~> 3.1)
     railties (3.2.3)
       actionpack (= 3.2.3)
       activesupport (= 3.2.3)
@@ -81,6 +182,7 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
+    ruby-prof (0.11.2)
     sass (3.1.20)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -101,15 +203,36 @@ GEM
     uglifier (1.2.6)
       execjs (>= 0.3.0)
       multi_json (~> 1.3)
+    warden (1.2.1)
+      rack (>= 1.0)
+    will_paginate (3.0.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 3.2.1)
+  bundler
+  capistrano
+  capistrano-ext
+  coffee-rails
+  dalli
+  delayed_job (= 2.1.4)
+  devise
+  execjs
+  gabba!
+  garails!
+  geokit
   jquery-rails
+  mobvious-rails
   mysql2
+  newrelic_rpm
+  passenger
   rails (= 3.2.3)
-  sass-rails (~> 3.2.3)
+  rails_autolink
+  ruby-prof
+  sass-rails
   therubyracer
-  uglifier (>= 1.0.3)
+  uglifier
+  weddingwire_api!
+  weddingwire_catalog!
+  will_paginate

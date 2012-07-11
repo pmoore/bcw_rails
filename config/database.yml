@@ -13,9 +13,9 @@ development:
   encoding: utf8
   reconnect: true
   database: bcw_rails_development
-  pool: 5
   username: root
   password: rootpass
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,15 +25,15 @@ test:
   encoding: utf8
   reconnect: false
   database: bcw_rails_test
-  pool: 5
   username: root
   password: rootpass
+  host: localhost
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
   database: bcw_rails_production
-  pool: 5
   username: root
   password: rootpass
+  host: localhost
