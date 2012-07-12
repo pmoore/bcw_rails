@@ -49,7 +49,7 @@ module BcwRails
     # This will create an empty whitelist of attributes available for mass-assignment for all models
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
-    config.active_record.whitelist_attributes = true
+    #config.active_record.whitelist_attributes = true
 
     # Enable the asset pipeline
     config.assets.enabled = true
@@ -62,7 +62,7 @@ module BcwRails
     config.ww_catalog_review_path = '/reviews?redirect='
 
     # ww api configs
-    config.ww_api_partner_key = 't7gbpfdj'
+    config.ww_api_partner_key = '7nudelte'
     config.ww_api_salt = 'c24c0b06e10a602d1a6ae9ea4f551d32'
     config.ww_api_host = 'api.weddingwire.com'
     config.ww_storefront_302 = '/vendors'

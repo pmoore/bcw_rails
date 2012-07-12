@@ -38,15 +38,23 @@ BcwRails::Application.configure do
   # ww catalog configs
   config.ww_catalog_review_hostname = 'http://staging.eventwire.com'
 
-  # ww api configs
-  #config.ww_api_host = 'brendan.weddingwire.com'
   config.ww_api_host = 'staging.weddingwire.com'
-  #config.ww_static = 'brendan.weddingwire.com:81/static'
-  config.ww_static = 'staging-static.weddingwire.com/static'
+  config.ww_api_partner_key = '7nudelte'
+  config.ww_api_salt = '9e71eb9fe2afa9f7fcc402ef2ddad74b'
+  config.ww_catalog_api_partner_key = '08qx13n8'
+  config.ww_catalog_api_salt = '6ab3d0c2d35617eb08261e12e0a79985'
+  config.ww_storefront_302 = 'http://localhost:3000'
+  # email direct
+  config.email_direct_key = 'a2ebc678-4670-49f2-a1cf-932e4914a019'
 
-  # fb api configs
-  config.fb_app_id = '270635429631224'
-  config.fb_app_secret = 'c0931be8d5c5fe76f9ecbe738a632f93'
+  # FB Configuration
+  config.fb_app_id = '185702801552994'
+
+  # GA
+  config.ga_account_id_web = 'MO-692627-66'
+  config.ga_account_id_iphone = 'MO-692627-89'
+  config.ga_account_id_android = 'MO-692627-88'
+  config.ga_domain_name = '.weddingwire.com'
 
   config.application_hostname = 'http://localhost:3000'
 

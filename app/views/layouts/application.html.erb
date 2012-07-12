@@ -15,7 +15,11 @@
 
     <div id="bcw-content">
         <%= yield %>
+
+        <%= render "layouts/bcw_sidebar" %>
     </div>
+
+    <div style="clear:both"></div>
 
     <%= render "layouts/bcw_footer" %>
 
