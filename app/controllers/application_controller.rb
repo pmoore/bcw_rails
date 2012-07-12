@@ -4,10 +4,13 @@ class ApplicationController < ActionController::Base
 
 
   def get_location
-    if session[:current_location].blank?
+    @bcw_city_slug = request.domain.gsub('thebest', '').gsub('best','').gsub('weddings','').gsub('wedding','').gsub('.com','')
+    @bcw_city = BcwConstants::Cities.find_city_by_url_slug(@bcw_city_slug)
+
+    if session[:current_location].blank? || session[:current_location] != @bcw_city_slug
       begin
-        results = WeddingWire::Api::Catalog.region_fetch("washingtondc")
-        session[:current_location] = params[:city_url_slug]
+        results = WeddingWire::Api::Catalog.region_fetch(@bcw_city_slug)
+        session[:current_location] = @bcw_city_slug
         session[:current_region] = results[:region_code]
       rescue Exception => ae
         session[:current_location] = nil

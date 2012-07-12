@@ -1,15 +1,32 @@
-<div class="bcw-left-pane">
+<div class="bcw-left-pane" xmlns="http://www.w3.org/1999/html">
   <div class="home-main-tile">
     <div class="home-main-tile-header">
       Find the best in wedding planning for
     </div>
     <div class="home-main-tile-header large">
-      Washington, DC Weddings
+      <%= city_name_pretty %> Weddings
     </div>
     <div class="home-main-tile-text">
       Discover Washington DC wedding planning ideas for your DC wedding. Search newlywed reviews for highly rated Washington DC reception sites, Washington DC wedding cakes professionals, Washington DC photographers and many more. Find Washington DC bridal shows and events in addition to wedding vendors to help you plan your perfect wedding.
     </div>
   </div>
   <div class="home-main-tile-image"></div>
+
+  <div style="clear: both"></div>
+
+  <div class="home-categories-container">
+    <div class="bcw-section-header categories-header">Top Rated <%= city_name_pretty %> Wedding Vendors</div>
+
+    <!--Category Tiles-->
+    <% @categories.each do |cat| %>
+        <div class="category-tile">
+          <a href="#"><div class="category-tile-image <%= cat.api_string %>"></div></a>
+          <div class="category-name"><%= link_to cat.name, "#" %></div>
+        </div>
+    <% end %>
+
+  </div>
 </div>
+
+
 
