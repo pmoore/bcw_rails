@@ -77,5 +77,7 @@ module BcwRails
     config.site_wiresite_name = 'BirthdayWire'
 
     config.ad_zone_id = '296'
+
+    config.showcase_categories = ['photography' , 'cake', 'rental', 'dj']
   end
 end

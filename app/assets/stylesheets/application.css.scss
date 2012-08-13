@@ -8,13 +8,21 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
+ *= require catalog_base.css
  *= require application_erb
+ *= require_self
 */
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0;
+}
+h1{
+  color: #502D0E;
+  font-family: georgia,arial,sans-serif;
+  font-size: 37px;
+  font-style: italic;
+  margin: 5px 0 10px 0;
 }
 
 a:link,
@@ -40,6 +48,9 @@ a:hover {
 body {
   margin-top: 0px;
   color: #502D0E;
+  line-height: normal;
+  background-color: #FFFFFF;
+  font-family: Times;
 }
 
 .site-center {

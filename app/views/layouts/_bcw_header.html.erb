@@ -10,7 +10,7 @@
 
   <div class="site-navigation-bar-inner">
     <%= link_to "Home", root_path, :class => "site-navigation-bar-button left site-navigation-bar-highlighted" %>
-    <%= link_to "Wedding Vendors", root_path, :class => "site-navigation-bar-button site-navigation-bar-highlighted" %>
+    <%= link_to "Wedding Vendors", vendors_landing_path(:city_seo_string => "washington-dc"), :class => "site-navigation-bar-button site-navigation-bar-highlighted" %>
     <%= link_to "Real Reviews", root_path, :class => "site-navigation-bar-button site-navigation-bar-highlighted" %>
     <%= link_to "Local Events", root_path, :class => "site-navigation-bar-button site-navigation-bar-highlighted" %>
     <%= link_to "Other Editions", root_path, :class => "site-navigation-bar-button site-navigation-bar-highlighted" %>
