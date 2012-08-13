@@ -38,7 +38,7 @@ BcwRails::Application.configure do
   # ww catalog configs
   config.ww_catalog_review_hostname = 'http://staging.eventwire.com'
 
-  config.ww_api_host = 'staging.weddingwire.com'
+  config.ww_api_host = 'staging-api.weddingwire.com'
   config.ww_api_partner_key = '7nudelte'
   config.ww_api_salt = '9e71eb9fe2afa9f7fcc402ef2ddad74b'
   config.ww_catalog_api_partner_key = '08qx13n8'

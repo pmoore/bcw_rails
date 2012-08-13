@@ -27,9 +27,19 @@ a:hover {
   color: #f2005b;
   text-decoration: none;
 }
+.core-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3em;
+}
+.light{
+  color: #999;
+}
 
 body {
   margin-top: 0px;
+  color: #502D0E;
 }
 
 .site-center {
@@ -77,6 +87,74 @@ body {
 }
 
 
+/* Sidebar */
+.sidebar-pane{
+  margin-bottom: 30px;
+  font-family: arial, verdana, sans-serif;
+  font-size: 10px;
+  .bcw-section-header{
+    font-size: 19px;
+    margin: 0;
+  }
+  .header-row{
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    height: 18px;
+    line-height: 15px;
+    .vendor{ float:left; text-align: left; padding-left: 5px; }
+    .review{ float:right; text-align: right; padding-right: 5px; }
+  }
+  .content-row{
+    border-bottom: 1px dotted #999;
+    width: 300px;
+    height: 33px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 11px;
+
+    .event-date{
+      float:left;
+      width: 50px;
+    }
+    .event-description{
+      float:left;
+      .event-title,
+      .event-host{
+        width: 250px;
+      }
+      .event-host{
+        font-weight: normal;
+      }
+    }
+  }
+  .more-link{
+    padding: 5px 0 0 5px;
+  }
+  .bcw-section-header + .content-row{
+    border-top: 1px dotted #999;
+  }
+}
+
+.sidebar-vendor-badge{
+  float:left;
+  width: 120px;
+}
+.sidebar-vendor-badge-code{
+  float: right;
+  width: 155px;
+  font-size: 11px;
+  .badge-code-header{
+    font-weight: bold;
+  }
+  .badge-code-container{
+    width: 155px;
+    height: 105px;
+    margin-top: 5px;
+    resize: none;
+    font-size: 10px;
+  }
+}
 
 
 /* Main Content */

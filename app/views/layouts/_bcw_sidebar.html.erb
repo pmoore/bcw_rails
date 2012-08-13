@@ -1,8 +1,17 @@
 <div class="bcw-right-pane">
 
+  <%= render 'layouts/recently_reviewed_tile' %>
+
+  <%= render 'layouts/bridal_shows_tile' %>
+
   <div class="sidebar-pane">
-    <div class="sidebar-pane-header">
-      <%= city_name_pretty %> Bridal Shows
+    <div class="sidebar-vendor-badge">
+      <%= image_tag 'BCW-vendorbadge.gif' %>
+    </div>
+    <div class="sidebar-vendor-badge-code">
+      <div class="badge-code-header">WEDDING PROFESSIONALS!</div>
+      Embed this on your website using the code below:
+      <%= text_area_tag 'embed-code', '<a href = "http://www.bestdcweddings.com" alt="Washington, DC weddings"><img src = "http://bestdcweddings.com/wwsites/code/images/common/BCW-vendorbadge.gif"/></a>', :class => "badge-code-container" %>
     </div>
   </div>
 
