@@ -1,0 +1,22 @@
+<div class="bcw-breadcrumb"><%= link_to "home", root_path %> > <%= link_to "events", events_path %></div>
+<div class="bcw-left-pane">
+
+  <div style="clear:both"></div>
+
+  <%= render 'filter_sidebar' %>
+
+  <div class="bcw-core-middle events-list-container">
+    <div class="bcw-section-header">Upcoming <%= city_name_pretty %> Bridal Shows and Events</div>
+
+    <div class="bcw-section-sub-header">showing page <%= @page %> of <%= @max_page %></div>
+
+    <div class="events-list">
+      <% @events.each do |event| %>
+        <%= render 'event_tile', :event => event %>
+      <% end %>
+    </div>
+
+  </div>
+
+
+</div>

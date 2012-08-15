@@ -1,9 +1,13 @@
 BcwRails::Application.routes.draw do
+  get "events/index"
+
   get "home/index"
 
   root :to => "home#index"
 
 
+  # Events
+  resources :events, :path => "/:city_seo_string-bridal-shows"
 
   # Vendor Catalog
 

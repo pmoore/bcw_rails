@@ -1,0 +1,13 @@
+<div class="event-tile">
+  <div class="event-date-container">
+    <div class="month"><%= event.start_date.strftime("%b") %></div>
+    <div class="day"><%= event.start_date.strftime("%-1d") %></div>
+  </div>
+  <div class="event-description">
+    <div class="event-title"><%= link_to event.title, "#" %></div>
+    <div class="event-host"><span class="light">Hosted By:</span> <%= event.vendor.name %></div>
+    <div class="event-host"><span class="light">Event Type:</span></div>
+  </div>
+
+  <div style="clear:both"></div>
+</div>

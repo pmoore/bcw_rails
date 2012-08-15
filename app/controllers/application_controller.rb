@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
   end
 
   def prepare_sidebar
-    @events = WeddingWire::Api::Catalog.events_fetch(session[:current_region], nil, 1, {:types => [{:api_string => "bridalshow"}]})
-    @events = @events[:events]
+    @sidebar_events = WeddingWire::Api::Catalog.events_fetch(session[:current_region], nil, 1, {:types => [{:api_string => "bridalshow"}]})
+    @sidebar_events = @sidebar_events[:events]
   end
 end

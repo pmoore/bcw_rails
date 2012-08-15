@@ -3,9 +3,9 @@
     <%= city_name_pretty %> Bridal Shows
   </div>
 
-  <% @events.each do |event| %>
+  <% @sidebar_events.each do |event| %>
     <div class="content-row">
-      <div class="event-date"><%= event.start_date.strftime("%b %d") %></div>
+      <div class="event-date"><%= event.start_date.strftime("%b %-1d") %></div>
 
       <div class="event-description">
         <div class="event-title"><%= event.title %></div>
